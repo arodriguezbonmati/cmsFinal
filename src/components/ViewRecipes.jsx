@@ -80,7 +80,7 @@ export default () => {
           <div className="info">
             <Title>{dataRecipe.recipe.title}</Title>
             <div className="mainPhoto">
-              <img src={dataRecipe.recipe.mainImage.url} />
+              <img src={`http://77.228.91.193/${dataRecipe.recipe.mainImage.url}`} />
             </div>
             <Date>{dataRecipe.recipe.date}</Date>
             <Descripcion>{dataRecipe.recipe.description}</Descripcion>
@@ -97,7 +97,7 @@ export default () => {
               {dataRecipe.recipe.steps.map((q, index) => {
                 return (
                   <Stepbystep>
-                    <img src={q.image}></img>
+                    <img src={`http://77.228.91.193/${q.image.url}`}></img>
                     <span>{index + 1} - {q.description}</span>
                   </Stepbystep>
                 )
